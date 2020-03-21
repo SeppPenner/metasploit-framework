@@ -8,7 +8,7 @@ gem 'sqlite3', '~>1.3.0'
 # separate from test as simplecov is not run on travis-ci
 group :coverage do
   # code coverage for tests
-  gem 'simplecov'
+  gem 'simplecov', '>= 0.17.0'
 end
 
 group :development do
@@ -27,14 +27,14 @@ end
 
 group :development, :test do
   # automatically include factories from spec/factories
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 5.0.2'
   # Make rspec output shorter and more useful
   gem 'fivemat'
   # running documentation generation tasks and rspec tasks
   gem 'rake'
   # Define `rake spec`.  Must be in development AND test so that its available by default as a rake test when the
   # environment is development
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.8.2'
   gem 'rspec-rerun'
   gem 'swagger-blocks'
 end
